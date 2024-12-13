@@ -1,4 +1,4 @@
-#Creación de la carpeta Matrioshka
+#Creación de la carpeta mohapro230
 New-Item -Path . -Name "mohapro2301" -ItemType "directory"
 
 #Crea carpetas y las mueve dentro de la anterior carpeta creada
