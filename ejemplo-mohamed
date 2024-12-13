@@ -1,0 +1,28 @@
+#Creación de la carpeta Matrioshka
+New-Item -Path . -Name "mohapro2301" -ItemType "directory"
+
+#Crea carpetas y las mueve dentro de la anterior carpeta creada
+
+New-Item -ItemType "directory" -Name "mohapro2302" -Path .
+Move-Item -Path mohapro2302 -Destination mohapro2301
+
+New-Item -ItemType "directory" -Name "mohapro2303" -Path .
+Move-Item -Path mohapro2303 -Destination mohapro2301\mohapro2302
+
+New-Item -ItemType "directory" -Name "mohapro2304" -Path .
+Move-Item -Path mohapro2304 -Destination mohapro2301\mohapro2302\mohapro2303
+
+New-Item -ItemType "directory" -Name "mohapro2305" -Path .
+Move-Item -Path mohapro2305 -Destination mohapro2301\mohapro2302\mohapro2303\mohapro2304
+
+#Cambia el nombre de todas las carpetas para que tengan el mismo nombre
+
+Rename-Item -Path "mohapro2301" -NewName "mohapro230"
+Rename-Item -Path "mohapro230\mohapro2302" -NewName "mohapro230"
+Rename-Item -Path "mohapro230\mohapro230\mohapro2303" -NewName "mohapro230"
+Rename-Item -Path "mohapro230\mohapro230\mohapro230\mohapro2304" -NewName "mohapro230"
+Rename-Item -Path "mohapro230\mohapro230\mohapro230\mohapro230\mohapro2305" -NewName "mohapro230"
+Rename-Item -Path "mohapro230\mohapro230" -NewName "mohapro230"
+Rename-Item -Path "mohapro230\mohapro230\mohapro2303" -NewName "mohapro230"
+Rename-Item -Path "mohapro230\mohapro230\mohapro230\mohapro2304" -NewName "mohapro230"
+Rename-Item -Path "mohapro230\mohapro230\mohapro230\mohapro230\mohapro2305" -NewName "mohapro230"
